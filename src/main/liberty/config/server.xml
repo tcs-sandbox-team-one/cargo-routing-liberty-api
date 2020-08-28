@@ -29,6 +29,5 @@
 
     <applicationMonitor updateTrigger="mbean"/>
 
-     <webApplication contextRoot="cargo-routing-service" id="cargotracker-routing" location="cargo-routing-service-1.0.war"
-      name="cargotracker-routing"/>
+     <webApplication contextRoot="/" id="cargotracker-routing" location="cargo-routing-service-1.0.war"/>
 </server>

@@ -53,13 +53,13 @@ spring:
 
   datasource:
     url: ${routingdburl}
-    username: ${routingdb.user.name}
-    password: ${routingdb.user.password}
+    username: ${ROUTINGDB_USERNAME}
+    password: ${ROUTINGDB_PASSWORD}
   rabbitmq:
     host: ${rabbitmqhost}
     port: ${rabbitmqport}
-    username: ${rabbitmq.user.name}
-    password: ${rabbitmq.user.password}  
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}  
 
   application:
     name: "${IMAGE_NAME:template-spring-boot}"    
@@ -84,7 +84,7 @@ management:
         include: "*"
 
 server:
-  port: ${PORT:8003}
+  port: ${PORT:9081}
 
 logging:
   level:

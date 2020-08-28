@@ -63,31 +63,26 @@ spec:
               value: {{ .Values.logLevel | quote }}
             - name: SPRING_PROFILES_ACTIVE
               value: {{ .Values.profiles.active | quote }}
-            - name: routingdb.user.name
+            - name: ROUTINGDB_USERNAME
               valueFrom:
                 secretKeyRef:
                   name: cargotracker-routing-credentials
                   key: routingdb.user.name
-            - name: routingdb.user.password
+            - name: ROUTINGDB_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: cargotracker-routing-credentials
                   key: routingdb.user.password
-            - name: rabbitmq.user.name
+            - name: RABBITMQ_USERNAME
               valueFrom:
                 secretKeyRef:
                   name: cargotracker-routing-credentials
                   key: rabbitmq.user.name
-            - name: rabbitmq.user.password
+            - name: RABBITMQ_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: cargotracker-routing-credentials
                   key: rabbitmq.user.password 
-            - name: rabbitmq.user.password
-              valueFrom:
-                secretKeyRef:
-                  name: cargotracker-routing-credentials
-                  key: rabbitmq.user.password
             - name: routingdburl
               valueFrom:
                 configMapKeyRef:
