@@ -10,8 +10,8 @@ profiles:
   active: ocp
 
 credentials:
-  dbusername: routingmsdb
-  dbpassword: password
+  dbusername: "cm91dGluZ21zZGI="
+  dbpassword: "cm91dGluZ21zZGI="
 
 datasources:
   dburl: "jdbc:mysql://mysql-cargo-dev.bluecargo-dev-kafka:3306/routingmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=EST&useSSL=false&allowPublicKeyRetrieval=true"
@@ -48,7 +48,7 @@ ingress:
 
 vcsInfo:
   repoUrl: "https://github.com/tcs-sandbox-team-one/cargo-routing-liberty-api.git"
-  branch: "kafka"
+  branch: "master"
 
 partOf: "cargotracker-backend-dev"
 
