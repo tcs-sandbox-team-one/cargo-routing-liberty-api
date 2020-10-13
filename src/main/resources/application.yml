@@ -3,14 +3,14 @@ spring:
     active: local
 
   datasource:
-    url: "jdbc:mysql://10.242.0.6:3306/routingmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=EST&useSSL=false"
+    url: "jdbc:mysql://mysql-cargo-dev:3306/routingmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=EST&useSSL=false&allowPublicKeyRetrieval=true"
     username: routingmsdb
-    password: password
+    password: routingmsdb
   rabbitmq:
-    host: localhost
+    host: "rabbitmq-cargo-dev-headless"
     port: 5672
-    username: guest
-    password: guest  
+    username: appuser
+    password: passw0rd  
 
   application:
     name: "${IMAGE_NAME:template-spring-boot}"    
